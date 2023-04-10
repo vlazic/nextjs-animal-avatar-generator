@@ -25,7 +25,7 @@
 To make this library compatible with Next.js, the following changes were made:
 
 1. Updated the TypeScript configuration to output CommonJS modules instead of ESM.
-2. Adjusted the import syntax for the `avatar` function in the `Avatar.tsx` component file to work with Next.js.
+2. Provided instructions for users on how to adjust the import syntax for the avatar function in their Next.js components to work with this modified library.
 
 <h2>Usage in Next.js</h2>
 
