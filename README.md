@@ -2,7 +2,11 @@
   <img src="https://raw.githubusercontent.com/roma-lukashik/animal-avatar-generator/e9b435bb28c8ae2dda224678bdda8faad6035373/preview.svg"/>
 </div>
 
-<h1 align="center">Animal Avatar Generator</h1>
+<h1 align="center">NextJS Animal Avatar Generator</h1>
+
+<div align="center">
+  <strong>This is a fork of the <a href="https://github.com/roma-lukashik/animal-avatar-generator">Animal Avatar Generator</a> library, modified to work with Next.js</strong>
+</div>
 
 <div align="center">
   <a href="https://github.com/roma-lukashik/animal-avatar-generator/blob/master/LICENSE">
@@ -16,42 +20,37 @@
   </a>
 </div>
 
-Generate SVG avatars on client side from a string seed.
-As long as the same version of the library is used it always returns the same avatar for the corresponding seed.
+<h2>Modifications for Next.js Compatibility</h2>
 
-<a href="https://roma-lukashik.github.io/animal-avatar-generator/dist/">Live example</a>
+To make this library compatible with Next.js, the following changes were made:
 
-<h2>Install</h2>
+1. Updated the TypeScript configuration to output CommonJS modules instead of ESM.
+2. Adjusted the import syntax for the `avatar` function in the `Avatar.tsx` component file to work with Next.js.
 
-Using npm:
-```bash
-$ npm install animal-avatar-generator --save
+<h2>Usage in Next.js</h2>
+
+In your Next.js project, install the package using npm or yarn:
+
+`npm install https://github.com/vlazic/nextjs-animal-avatar-generator --save`
+`yarn add https://github.com/vlazic/nextjs-animal-avatar-generator`
+
+To use the generator in your Next.js components, you can require the library:
+
+`const avatar = require('nextjs-animal-avatar-generator').default;`
+
+Then, you can use the `avatar` function to generate SVG avatars:
+
+```jsx
+function Avatar(props) {
+  const svg = avatar(props.name, { size: 200 });
+
+  return (
+    <div width="200" height="200" dangerouslySetInnerHTML={{ __html: svg }} />
+  );
+}
 ```
-or using yarn:
-```bash
-$ yarn add animal-avatar-generator
-```
 
-<h2>Usage</h2>
-
-```ts
-import avatar from 'animal-avatar-generator'
-
-const svg = avatar('your custom seed', { size: 200 })
-document.getElementById('avatar').innerHTML = svg
-```
-
-<h2>Configuration options</h2>
-
-|Name|Type|Description|Default|
-|---|---|---|---|
-|`size`|`number`|Avatar size in pixels|`150`|
-|`round`|`boolean`|Use round or rectangle shape|`true`|
-|`blackout`|`boolean`|Use blackout for right side of an avatar|`true`|
-|`avatarColors`|`string[]`|Palette for avatar colors|`['#d7b89c', '#b18272','#ec8a90','#a1Ac88','#99c9bd','#50c8c6']`|
-|`backgroundColors`|`string[]`|Palette for background colors|`['#fcf7d1', '#ece2e1','#e4e3cd','#c4ddd6','#b5f4bc']`|
-
-Missing a configuration? [Raise an issue](https://github.com/roma-lukashik/animal-avatar-generator/issues/new?title=New%20configuration:).
+For the complete list of configuration options, please refer to the original [Animal Avatar Generator](https://github.com/roma-lukashik/animal-avatar-generator) library.
 
 <h2>License</h2>
 <a href="https://github.com/roma-lukashik/animal-avatar-generator/blob/master/LICENSE">MIT</a>

@@ -1,15 +1,16 @@
 {
-  "name": "animal-avatar-generator",
+  "name": "nextjs-animal-avatar-generator",
   "version": "1.1.0",
   "private": false,
-  "description": "Animal avatar generator",
+  "description": "Animal avatar generator for Next.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
     "avatar",
     "generator",
     "typescript",
-    "javascript"
+    "javascript",
+    "nextjs"
   ],
   "scripts": {
     "start": "cd example && webpack-dev-server",
@@ -21,17 +22,21 @@
   "files": [
     "dist/**/*"
   ],
-  "type": "module",
   "author": {
     "name": "Roman Lukashik",
     "email": "roman.lukashik@gmail.com"
   },
+  "maintainer": {
+    "name": "Vladimir Lazić",
+    "email": "contact@vlazic.com",
+    "url": "https://vlazic.com/"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/roma-lukashik/animal-avatar-generator.git"
+    "url": "https://github.com/vlazic/nextjs-animal-avatar-generator.git"
   },
   "license": "MIT",
-  "homepage": "https://github.com/roma-lukashik/animal-avatar-generator",
+  "homepage": "https://github.com/vlazic/nextjs-animal-avatar-generator",
   "devDependencies": {
     "@types/jest": "^29.2.0",
     "@typescript-eslint/eslint-plugin": "^5.40.0",

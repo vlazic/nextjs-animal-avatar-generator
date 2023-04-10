@@ -16,17 +16,13 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "downlevelIteration": true,
-    "module": "esnext",
+    "module": "commonjs", // Change this to output CommonJS modules
     "moduleResolution": "node",
+    "esModuleInterop": true, // Add this to enable compatibility between ESM and CommonJS
     "importHelpers": true,
     "declaration": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "typeRoots": ["node_modules/@types"],
     "target": "ES2017",
-    "lib": [
-      "es2019",
-      "dom"
-    ]
+    "lib": ["es2019", "dom"]
   }
 }
